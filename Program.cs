@@ -32,6 +32,8 @@ namespace Blink_API
 
 
 
+
+
             builder.Services.AddControllers();
             // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
             builder.Services.AddOpenApi();
@@ -51,6 +53,9 @@ namespace Blink_API
                 app.MapOpenApi();
                 app.UseSwaggerUI(app => app.SwaggerEndpoint("/openapi/v1.json", "v1"));
             }
+
+            //Allow to use wwwroot
+            app.UseStaticFiles();
 
             app.UseHttpsRedirection();
 
