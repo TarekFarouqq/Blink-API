@@ -1,5 +1,6 @@
 ﻿namespace Blink_API.Errors
 {
+    //
     public class ApiResponse
     {
         public int StatusCode { get; set; }
